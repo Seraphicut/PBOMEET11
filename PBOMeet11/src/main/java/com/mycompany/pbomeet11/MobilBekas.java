@@ -9,6 +9,27 @@ package com.mycompany.pbomeet11;
  *
  * @author A-27
  */
-public class MobilBekas {
-    
+    public class MobilBekas extends MOBIL{
+        private int tahun;
+        private double harga;
+
+        public MobilBekas(int tahun, double harga, String merek, String model) {
+            super(merek, model);
+            this.tahun = tahun;
+            this.harga = harga;
+        }
+
+        public int getTahun() {
+            return tahun;
+        }
+
+        public double getHarga() {
+            return harga;
+        }
+
+        @Override
+        public void info() {
+            super.info(); 
+            System.out.println("Mobil Bekas: " + getMerek() + " " + getModel() + " ("+ tahun + ")");
+    }
 }
